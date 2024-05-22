@@ -3,6 +3,8 @@
 ## 1.) Dataset
 ### Collected Images from isic cli - Shared on my google drive
 ### Total Images: 3297
+### Malignant: 1 498 
+### Beingn: 1 801 
 https://drive.google.com/drive/folders/1RdlCSJl6IwPfvVNwzX6PDbz1KCXHwysM?usp=sharing
 
 ![download](https://github.com/orbant12/Melanoma_CNN/assets/124793231/0231e8d1-3819-4bd6-b26a-f8c2afa18b50)
