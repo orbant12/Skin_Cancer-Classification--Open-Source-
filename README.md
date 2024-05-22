@@ -42,28 +42,23 @@ https://drive.google.com/drive/folders/1RdlCSJl6IwPfvVNwzX6PDbz1KCXHwysM?usp=sha
 # +.) Google Cloud 
 
 ## 1.) Export Model to Json
-
-<script>
     
         !pip install tensorflowjs
     !tensorflowjs_converter \
         --input_format=keras \
         my_model.h5 \
         drive/MyDrive/ML/my_tfjs_model_new
-    
-</script>
+
+---
 
 ## 2.) Upload to cloud then load model with Node - @tensorflow-tfjs
-
-<code>
     
     const modelUrl = "https://firebasestorage.googleapis.com/v0/b/pocketprotect-cc462.appspot.com/o/skincancer.json?alt=media&token=fd378918-7503-40c9-8aee-33bc9d61337d";
-    const model = await tf.loadLayersModel(modelUrl);</code>
+    const model = await tf.loadLayersModel(modelUrl);
 
+---
 
 ## 3.) Single Input Base64String - Preprocessing for the model
-
-<code>
     
     async function decodeBase64ToTensor(base64String) {
         try {
@@ -86,10 +81,6 @@ https://drive.google.com/drive/folders/1RdlCSJl6IwPfvVNwzX6PDbz1KCXHwysM?usp=sha
         }
     }
 
-</code>
-
-<code>
-
     function preprocessImage(imageTensor) {
         try {
             // Normalize the image tensor to have values in [0, 1] and add batch dimension
@@ -100,12 +91,10 @@ https://drive.google.com/drive/folders/1RdlCSJl6IwPfvVNwzX6PDbz1KCXHwysM?usp=sha
             throw error;
         }
     }
-</code>
 
+---
 
 ## 4.) Predict Image Tensor
-
-<code>
 
     async function predict(model, imageTensor) {
         try {
@@ -119,7 +108,7 @@ https://drive.google.com/drive/folders/1RdlCSJl6IwPfvVNwzX6PDbz1KCXHwysM?usp=sha
         }
     }
 
-</code>
+
 
 
 
