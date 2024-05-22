@@ -42,8 +42,9 @@ https://drive.google.com/drive/folders/1RdlCSJl6IwPfvVNwzX6PDbz1KCXHwysM?usp=sha
 # +.) Google Cloud 
 
 ## 1.) Single Input Base64String - Preprocessing for the model
-<code>
 
+<code>
+    
     async function decodeBase64ToTensor(base64String) {
         try {
             const buffer = Buffer.from(base64String, 'base64');
