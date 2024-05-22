@@ -41,7 +41,29 @@ https://drive.google.com/drive/folders/1RdlCSJl6IwPfvVNwzX6PDbz1KCXHwysM?usp=sha
 
 # +.) Google Cloud 
 
-## 1.) Single Input Base64String - Preprocessing for the model
+## 1.) Export Model to Json
+
+<script>
+    
+        !pip install tensorflowjs
+    !tensorflowjs_converter \
+        --input_format=keras \
+        my_model.h5 \
+        drive/MyDrive/ML/my_tfjs_model_new
+    
+</script>
+
+## 2.) Upload to cloud then load model with Node - @tensorflow-tfjs
+
+<code>
+    
+    const modelUrl = "https://firebasestorage.googleapis.com/v0/b/pocketprotect-cc462.appspot.com/o/skincancer.json?alt=media&token=fd378918-7503-40c9-8aee-33bc9d61337d";
+    const model = await tf.loadLayersModel(modelUrl);
+    
+</code>
+
+
+## 3.) Single Input Base64String - Preprocessing for the model
 
 <code>
     
@@ -80,6 +102,25 @@ https://drive.google.com/drive/folders/1RdlCSJl6IwPfvVNwzX6PDbz1KCXHwysM?usp=sha
             throw error;
         }
     }
+</code>
+
+
+## 4.) Predict Image Tensor
+
+<code>
+
+    async function predict(model, imageTensor) {
+        try {
+            // Perform prediction using the loaded model
+            const prediction = model.predict(imageTensor);
+            const predictionData = await prediction.data();
+            return predictionData;
+        } catch (error) {
+            console.error("Error in predict function:", error);
+            throw error;
+        }
+    }
+
 </code>
 
 
