@@ -1,4 +1,4 @@
-# Skin Cancer CNN Model - Malignant or Bening
+# Skin Cancer Binary Classification( Malignant or Bening ) 
 
 ## 1.) Dataset
 ### Collected Images from isic cli 
