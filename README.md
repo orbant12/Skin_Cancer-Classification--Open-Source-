@@ -42,7 +42,9 @@ https://drive.google.com/drive/folders/1RdlCSJl6IwPfvVNwzX6PDbz1KCXHwysM?usp=sha
 # +.) Google Cloud 
 
 ## 1.) Single Input Base64String - Preprocessing for the model
-<code>async function decodeBase64ToTensor(base64String) {
+<code>
+
+    async function decodeBase64ToTensor(base64String) {
     try {
         const buffer = Buffer.from(base64String, 'base64');
         const { data, info } = await sharp(buffer)
@@ -63,6 +65,9 @@ https://drive.google.com/drive/folders/1RdlCSJl6IwPfvVNwzX6PDbz1KCXHwysM?usp=sha
     }
 }
 
+</code>
+
+
 function preprocessImage(imageTensor) {
     try {
         // Normalize the image tensor to have values in [0, 1] and add batch dimension
@@ -72,4 +77,7 @@ function preprocessImage(imageTensor) {
         console.error("Error in preprocessImage function:", error);
         throw error;
     }
-}</code>
+}
+
+
+
