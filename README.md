@@ -56,10 +56,8 @@ https://drive.google.com/drive/folders/1RdlCSJl6IwPfvVNwzX6PDbz1KCXHwysM?usp=sha
 ## 2.) Upload to cloud then load model with Node - @tensorflow-tfjs
 
 <code>
-    
     const modelUrl = "https://firebasestorage.googleapis.com/v0/b/pocketprotect-cc462.appspot.com/o/skincancer.json?alt=media&token=fd378918-7503-40c9-8aee-33bc9d61337d";
     const model = await tf.loadLayersModel(modelUrl);
-    
 </code>
 
 
