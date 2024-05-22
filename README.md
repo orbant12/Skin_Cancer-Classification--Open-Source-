@@ -45,39 +45,41 @@ https://drive.google.com/drive/folders/1RdlCSJl6IwPfvVNwzX6PDbz1KCXHwysM?usp=sha
 <code>
 
     async function decodeBase64ToTensor(base64String) {
-    try {
-        const buffer = Buffer.from(base64String, 'base64');
-        const { data, info } = await sharp(buffer)
-            .resize(224, 224)
-            .raw()
-            .toBuffer({ resolveWithObject: true });
-
-        const { width, height, channels } = info;
-        if (width !== 224 || height !== 224 || channels !== 3) {
-            throw new Error('Image is not the correct size or number of channels.');
+        try {
+            const buffer = Buffer.from(base64String, 'base64');
+            const { data, info } = await sharp(buffer)
+                .resize(224, 224)
+                .raw()
+                .toBuffer({ resolveWithObject: true });
+    
+            const { width, height, channels } = info;
+            if (width !== 224 || height !== 224 || channels !== 3) {
+                throw new Error('Image is not the correct size or number of channels.');
+            }
+    
+            const imageTensor = tf.tensor3d(new Uint8Array(data), [height, width, channels]);
+            return imageTensor;
+        } catch (error) {
+            console.error("Error in decodeBase64ToTensor function:", error);
+            throw error;
         }
-
-        const imageTensor = tf.tensor3d(new Uint8Array(data), [height, width, channels]);
-        return imageTensor;
-    } catch (error) {
-        console.error("Error in decodeBase64ToTensor function:", error);
-        throw error;
     }
-}
 
 </code>
 
+<code>
 
-function preprocessImage(imageTensor) {
-    try {
-        // Normalize the image tensor to have values in [0, 1] and add batch dimension
-        const normalizedTensor = imageTensor.div(tf.scalar(255.0)).expandDims(0);
-        return normalizedTensor;
-    } catch (error) {
-        console.error("Error in preprocessImage function:", error);
-        throw error;
+    function preprocessImage(imageTensor) {
+        try {
+            // Normalize the image tensor to have values in [0, 1] and add batch dimension
+            const normalizedTensor = imageTensor.div(tf.scalar(255.0)).expandDims(0);
+            return normalizedTensor;
+        } catch (error) {
+            console.error("Error in preprocessImage function:", error);
+            throw error;
+        }
     }
-}
+</code>
 
 
 
