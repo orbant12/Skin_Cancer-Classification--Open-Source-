@@ -31,5 +31,5 @@ https://drive.google.com/drive/folders/1RdlCSJl6IwPfvVNwzX6PDbz1KCXHwysM?usp=sha
 ### Loss
 ![download (3)](https://github.com/orbant12/Melanoma_CNN/assets/124793231/1b28e47d-81a2-4f6b-8849-cbeceec71901)
 
-### Accuracy
+### Accuracy - 0.92
 ![download (4)](https://github.com/orbant12/Melanoma_CNN/assets/124793231/88a5d3c5-381d-40ba-9b6b-d17a5b41b4f3)
