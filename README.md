@@ -121,7 +121,7 @@ https://drive.google.com/drive/folders/1RdlCSJl6IwPfvVNwzX6PDbz1KCXHwysM?usp=sha
         - Validation has 0.92 accuracy 
             Therfore this hypothesis is WRONG
 
-#### 1,) Hypothesis: Model does better on the data it has been trained on - Overfitting
+#### 2,) Hypothesis: Commonly expected images from the app differs significantly from the images in the dataset
         
 
 
