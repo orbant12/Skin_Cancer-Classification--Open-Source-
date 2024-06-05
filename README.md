@@ -125,7 +125,6 @@ https://drive.google.com/drive/folders/1RdlCSJl6IwPfvVNwzX6PDbz1KCXHwysM?usp=sha
     Solution:
         - Collecting each mole image carefully from ISIC ARCHIVE 
             with the following statment: "Could this picture be taken with a phone"
-        - https://gallery.isic-archive.com/#!/topWithHeader/onlyHeaderTop/gallery?filter=%5B%22benign_malignant%7Cbenign%22%5D
 
 <img width="1034" alt="Screenshot 2024-06-05 at 11 17 15" src="https://github.com/orbant12/Skincancer_binary-classification/assets/124793231/b1d52ffe-f4e7-4477-a1b9-490aae58fda0">
 
