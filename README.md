@@ -122,6 +122,8 @@ https://drive.google.com/drive/folders/1RdlCSJl6IwPfvVNwzX6PDbz1KCXHwysM?usp=sha
             Therfore this hypothesis is WRONG
 
 ### 2.) Hypothesis: Commonly expected images from the app differs significantly from the images in the dataset
+    Solution:
+        - Collecting each mole image carefully from ISIC ARCHIVE with the following statment: "Could this picture be taken with a phone"
         
 
 
