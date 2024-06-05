@@ -115,13 +115,13 @@ https://drive.google.com/drive/folders/1RdlCSJl6IwPfvVNwzX6PDbz1KCXHwysM?usp=sha
 
 ## Problem: New moles from the mobile app is very inaccurate, but images from the dataset uploaded trough the app is accurate
 
-#### 1,) Hypothesis: Model does better on the data it has been trained on - Overfitting
+### 1.) Hypothesis: Model does better on the data it has been trained on - Overfitting
     Proven wrong by:
         - Creating a validation set with 20% of the full dataset
         - Validation has 0.92 accuracy 
             Therfore this hypothesis is WRONG
 
-#### 2,) Hypothesis: Commonly expected images from the app differs significantly from the images in the dataset
+### 2.) Hypothesis: Commonly expected images from the app differs significantly from the images in the dataset
         
 
 
