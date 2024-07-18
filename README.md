@@ -15,7 +15,7 @@ https://drive.google.com/drive/folders/1RdlCSJl6IwPfvVNwzX6PDbz1KCXHwysM?usp=sha
 
 ## 2.) Simple Image Decoding
 <code>def decode_image(filepath, label):
-    img = tf.io.read_file(filepath)
+    img = tf.io.read_file(filepath) 
     img = tf.image.decode_jpeg(img)
     img = tf.image.resize(img, [224, 224])
     img = tf.cast(img, tf.float32) / 255.0
