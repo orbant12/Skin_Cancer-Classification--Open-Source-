@@ -22,7 +22,7 @@ https://drive.google.com/drive/folders/1RdlCSJl6IwPfvVNwzX6PDbz1KCXHwysM?usp=sha
     return img, label</code>
 
 ---
-
+ 
 ## 3.) Model Architecture
 
 ![Screenshot 2024-05-22 at 17 24 32](https://github.com/orbant12/Melanoma_CNN/assets/124793231/c80aa69d-4379-4b55-b96e-853d9bac2222)
