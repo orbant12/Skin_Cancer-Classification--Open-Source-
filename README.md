@@ -21,7 +21,7 @@ https://drive.google.com/drive/folders/1RdlCSJl6IwPfvVNwzX6PDbz1KCXHwysM?usp=sha
     img = tf.cast(img, tf.float32) / 255.0
     return img, label</code>
 
----
+--- 
  
 ## 3.) Model Architecture
 
